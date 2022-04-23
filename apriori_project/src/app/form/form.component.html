@@ -1,0 +1,48 @@
+<nav class="navbar navbar-light bg-success">
+  <div class="container-fluid">
+    <span class="navbar-brand mb-0 h1 text-light"
+      >Apriori Algorithm Implementation</span
+    >
+  </div>
+  <div class="container full-form my-5">
+    <label for="basic-url" class="form-label text-light mb-5"
+      >Finding Frequent Itemset Using Candidate Generation</label
+    >
+
+    <div class="input-group">
+      <span class="input-group-text">List of Items</span>
+      <textarea
+        class="form-control text-area"
+        aria-label="itemlist"
+        [(ngModel)]="newData.listItems"
+        [ngModelOptions]="{ standalone: true }"
+      >
+      </textarea>
+    </div>
+
+    <div class="input-group">
+      <span class="input-group-text">List of Transactions</span>
+      <textarea
+        class="form-control text-area"
+        aria-label="transactionlist"
+        [(ngModel)]="newData.listTransactions"
+        [ngModelOptions]="{ standalone: true }"
+      ></textarea>
+    </div>
+
+    <div class="input-group my-3">
+      <span class="input-group-text">Minimum Support Count</span>
+      <input
+        type="number"
+        placeholder="Minimum Support Count"
+        aria-label="minsup"
+        [(ngModel)]="newData.minsup"
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+
+    <button type="submit" class="btn btn-light my-3" (click)="addData()">
+      Submit
+    </button>
+  </div>
+</nav>
